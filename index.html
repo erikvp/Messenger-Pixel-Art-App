@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <title>Photon - Pixel Art</title>
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="//cdn.jsdelivr.net/particle-api-js/5/particle.min.js"></script>
+  <!-- Not sure why socket.io.js is necessary. Copied from Tega Brain Coding Train example-->
+  <!-- Works the same if commented out -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.6/socket.io.js"></script> -->
+  <script src="libraries/p5.js" type="text/javascript"></script>
+  <script src="libraries/p5.dom.js" type="text/javascript"></script>
+  <script defer src="particle.js" type="text/javascript"></script>
+  <script defer src="sketch.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+  <div class='container'>
+    <div class='header'>
+      <h3>Messenger & Pixel Art App</h3>
+      <p>Transmission Status:
+        <span id='status-line' class='ready'>READY</span>
+      </p>
+      <label for="message">Enter Message:</label>
+      <input type="text" id="text-box" maxlength="20" placeholder="">
+      <input type="button" id="send-btn" value="SEND">
+      <div id='log'>
+        <table id='msg-log'>
+          <tr>
+            <th class='time-col'>Time Sent:</th>
+            <th class='message-col'>Message:</th>
+          </tr>
+        </table>
+      </div>
+      <div id='canvasTable'>
+        <table id='pixelTable' class='pixel'></table>
+
+
+      </div>
+      <input type="button" id="clear-btn" value="CLEAR">
+
+
+    </div>
+
+  </div>
+
+</body>
+
+
+</html>

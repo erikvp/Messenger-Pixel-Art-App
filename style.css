@@ -1,0 +1,76 @@
+body {
+  background: rgb(19, 18, 18);
+  color: rgb(12, 245, 12);
+  font-family: 'Nanum Gothic Coding', monospace;
+  /* font-family: monospace; */
+  margin: 50px;
+}
+
+span.ready {
+  background: rgb(10, 230, 10);
+  color: black;
+}
+
+span.sending {
+  background: rgb(243, 247, 14);
+  color: black;
+}
+
+span.complete {
+  background: rgb(10, 230, 10);
+  color: black;
+}
+
+#text-box {
+  width: 200px;
+}
+
+#send-btn {
+  background: rgb(19, 18, 18);
+  color: rgb(10, 230, 10);
+  outline: none;
+  /* removes blue border when button is clicked */
+}
+
+#clear-btn {
+  background: rgb(19, 18, 18);
+  color: rgb(10, 230, 10);
+  outline: none;
+  /* removes blue border when button is clicked */
+}
+
+th.time-col {
+  width: 150px;
+  text-align: left;
+}
+
+th.message-col {
+  width: 500px;
+  text-align: left;
+}
+
+.pixel {
+  border: 1px solid white;
+  background: rgb(19, 18, 18);
+  border-collapse: collapse;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr {
+  height: 20px;
+}
+
+td {
+  width: 20px;
+}
+
+#log {
+  height: 200px;
+}
+
+.white {
+  background: white;
+}
