@@ -4,17 +4,20 @@
 
 function sendMessage() {
   let newMessage = document.getElementById('text-box').value
-  let sendCode = { str: newMessage };
-  let postURL = 'https://api.particle.io/v1/devices/5b0035000c51353432383931/newmsg?access_token=e53696eadec1c6c5f8402c2cba52a10a509be28d'
+  let sendCode = {
+    str: newMessage
+  };
+
+  // * * * * * * ENTER YOUR DEVICE ID (xxxxxx) and ACCESS TOKEN (yyyyyyy)
+  let postURL = 'https://api.particle.io/v1/devices/xxxxxxxxxxx/newmsg?access_token=yyyyyyyyyyyyyyyyyyyyyy'
 
   changeText('SENDING');
   console.log('new message:', newMessage);
   /*
   Particle.publish() returns the following to the callback functions in httpPost
-  result: {"id":"5b0035000c51353432383931","last_app":"","connected":true,"return_value":1}
+  result: {"id":"xxxxxxxxxxxxxxx","last_app":"","connected":true,"return_value":1}
   */
 
-  //Note:  fetch might be an ES6 alternative, or axios library
   httpPost(
     postURL,
     sendCode,
@@ -35,14 +38,18 @@ function sendMessage() {
 }
 
 function sendPixel(_tdRowColColor) {
-  let sendCode = { str: _tdRowColColor };
-  let postURL = 'https://api.particle.io/v1/devices/5b0035000c51353432383931/pixelxyc?access_token=e53696eadec1c6c5f8402c2cba52a10a509be28d'
+  let sendCode = {
+    str: _tdRowColColor
+  };
+
+  // * * * * * * IMPORTANT ENTER YOUR DEVICE ID (xxxxxxx) and ACCESS TOKEN (yyyyyyyyyyyy)
+  let postURL = 'https://api.particle.io/v1/devices/xxxxxxxxxxxxx/pixelxyc?access_token=yyyyyyyyyyyyyyyyy'
 
   changeText('SENDING');
   console.log('new pixel row/colID/Color:', _tdRowColColor);
   /*
   Particle.publish() returns the following to the callback functions in httpPost
-  result: {"id":"5b0035000c51353432383931","last_app":"","connected":true,"return_value":1}
+  result: {"id":"xxxxxxxxxxxxxxxxxx","last_app":"","connected":true,"return_value":1}
   */
 
   httpPost(
@@ -65,15 +72,18 @@ function sendPixel(_tdRowColColor) {
 
 function clearOled() {
   let displayStatus = document.getElementById('clear-btn').value
-  let sendCode = { str: displayStatus };
-  let postURL = 'https://api.particle.io/v1/devices/5b0035000c51353432383931/clearoled?access_token=e53696eadec1c6c5f8402c2cba52a10a509be28d'
+  let sendCode = {
+    str: displayStatus
+  };
+  // * * * * * * IMPORTANT ENTER YOUR DEVICE ID (xxxxxxx) and ACCESS TOKEN (yyyyyyyyyyyy)
+  let postURL = 'https://api.particle.io/v1/devices/xxxxxxxxxx/clearoled?access_token=yyyyyyyyyyyyyyy'
 
   makeGrid(row, col, rowID, colID); // redraw grid to clear it
   changeText('SENDING');
   console.log('CLEAR OLED');
   /*
   Particle.publish() returns the following to the callback functions in httpPost
-  result: {"id":"5b0035000c51353432383931","last_app":"","connected":true,"return_value":1}
+  result: {"id":"xxxxxxxxxxxxxx","last_app":"","connected":true,"return_value":1}
   */
 
   httpPost(

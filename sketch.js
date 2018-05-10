@@ -9,7 +9,11 @@ let particle = new Particle();
 
 function preload() {
 
-  particle.login({ username: 'erikvp99@yahoo.com', password: 'Part1cl3' }).then(
+  //  * * * * * * IMPORTANT:  ENTER YOUR username and password * * * * * * 
+  particle.login({
+    username: 'xyz@xyz.com',
+    password: '1234'
+  }).then(
     function (data) {
       let token = data.body.access_token;
       console.log('Particle Login Successful:', token);
